@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { main_file } from "./db-config";
+import { initializeApp } from "firebase/app";
+import "./components/style.scss";
+import Typography from "./components/Typography";
+import Page from "./components/Page/Page";
+const app = initializeApp(main_file);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <Page />
+      </div>
+      <div></div>
     </div>
   );
 }
